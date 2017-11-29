@@ -29,7 +29,11 @@ void stack::push(int a){
 }
 
 int stack::pop(){
-	assert(this->top>0);
+	if (this->top == 0){
+		this->~stack();
+		//free(this->dane);
+		assert(this->top>0);
+	}
 	return this->dane[--this->top];
 }
 

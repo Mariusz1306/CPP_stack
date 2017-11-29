@@ -1,5 +1,3 @@
-
-
 class stack {
     public:
         void push(int a);
