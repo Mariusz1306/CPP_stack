@@ -1,4 +1,3 @@
-//#include <stdio.h>
 #include <iostream>
 #include "stack.h"
 
@@ -7,7 +6,7 @@ int main(){
 	for (int i = 0; i <= 10; i++)
         s1.push(i);
     for (int i = 0; i <= 10; i++)
-        //printf("%d\n",s1.pop());
         std::cout << s1.pop() << std::endl;
+    std::cout << "is stack empty? " << s1.isEmpty();
 	return 0;
 }

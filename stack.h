@@ -7,6 +7,7 @@ class stack {
         void clear();
         stack();
         ~stack();
+        bool isEmpty();
     private:
         int top;
         int *dane;

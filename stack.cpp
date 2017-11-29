@@ -33,3 +33,6 @@ int stack::pop(){
 	return this->dane[--this->top];
 }
 
+bool stack::isEmpty(){
+	return (this->top==0 ? true : false);
+}
