@@ -8,11 +8,13 @@ int stacksize = initSTACKSIZE;
 
 stack::stack(){
 	this->top=0;
-	this->dane = (int *) malloc(stacksize * sizeof(int));
+	//this->dane = (int *) malloc(stacksize * sizeof(int));
+	this->dane = new int[stacksize];
 }
 
 stack::~stack(){
-    free(this->dane);
+    //free(this->dane);
+    delete this->dane;
 }
 
 void stack::clear(){
@@ -23,7 +25,8 @@ void stack::push(int a){
 	//assert(this->top<stacksize);
 	if (this->top>=stacksize){
             stacksize *= 2;
-            this->dane = (int *) realloc(this->dane, stacksize * sizeof(int));
+            //this->dane = (int *) realloc(this->dane, stacksize * sizeof(int));
+            this->dane.resize(stacksize);
         }
 	this->dane[this->top++]=a;
 }
